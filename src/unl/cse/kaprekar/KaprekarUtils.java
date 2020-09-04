@@ -30,7 +30,7 @@ public class KaprekarUtils {
 		}
 		
 		//we use a long to accommodate larger squares
-		long square = n * n;
+		long square = n * (long) n;
 		int numDigits = (int) Math.log10(square) + 1;
 		long modulus = 1;
 		long first, second;
@@ -38,7 +38,7 @@ public class KaprekarUtils {
 			modulus *= 10;
 			first = square / modulus;
 			second = square % modulus;
-			if(second > 0 && first + second == n) {
+			if(second > 0 && n== first + second) {
 				return true;
 			}
 		}
